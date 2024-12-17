@@ -1,116 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kolambugan Municipality</title>
-    
     <style>
-    body {
-        display: flex;
-        flex-direction: column;
-        height: 100vh; 
-        background-color: #e2e4de; 
-        font-family: sans-serif;
-        margin: 0;
-    }
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #e2e4de;
+            font-family: sans-serif;
+            margin: 0;
+        }
 
-    header {
-        background-color: rgba(131, 197, 131, 0.8); 
-        padding: 20px 0; 
-        text-align: center;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-right: 20px;
-        padding-left: 20px;
-    }
+        header {
+            background-color: rgba(131, 197, 131, 0.8);
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
 
-    .logo img {
-        width: 150px; 
-        height: 150px; 
-        border-radius: 50%;
-        object-fit: cover; 
-        border: 2px solid #ccc; 
-    }
+        .logo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ccc;
+        }
 
-    
-    .nav-menu {
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-    }
+        .nav-menu {
+            position: relative;
+        }
 
-    ul {
-        list-style: none; 
-        margin: 0;
-        padding: 0;
-        display: flex; 
-    }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
 
-    ul li {
-        margin: 0 20px; 
-        position: relative; 
-    }
+        ul li {
+            margin: 0 20px;
+            position: relative;
+        }
 
-    ul li a {
-        color: #0c0101; 
-        text-decoration: none; 
-        font-size: 24px;
-        padding: 10px; 
-    }
+        ul li a {
+            color: #0c0101;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 10px;
+        }
 
-    .dropdown {
-        display: none; 
-        position: absolute; 
-        left: 0; 
-        top: 100%;
-        background-color: rgba(131, 197, 131, 0.8);
-        border-radius: 4px; 
-        width: 180px; 
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-    }
-    
-    ul li:hover .dropdown {
-        display: block;
-    }
-    
-    .dropdown li {
-        display: block; 
-        margin: 5px 0; 
-    }
+        .dropdown {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: rgba(131, 197, 131, 0.8);
+            border-radius: 4px;
+            width: 180px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    #content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 1;
-        text-align: center;
-        padding: 20px;
-    }
+        ul li:hover .dropdown {
+            display: block;
+        }
 
-    #para1 {
-        font-size: 3em;
-    }
+        .dropdown li {
+            margin: 5px 0;
+        }
 
-    h1 {
-        font-size: 100px;
-    }
+        #content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            text-align: center;
+            padding: 20px;
+        }
 
-    #para2 {
-        font-size: 3em;
-    }
+        #para1 {
+            font-size: 3em;
+        }
 
-    footer {
-        background-color: rgba(131, 197, 131, 0.8); 
-        text-align: center;
-        padding: 20px;
-    }
+        h1 {
+            font-size: 100px;
+        }
 
-</style>    
+        #para2 {
+            font-size: 3em;
+        }
+
+        footer {
+            background-color: rgba(131, 197, 131, 0.8);
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .logo img {
+                width: 120px;
+                height: 120px;
+            }
+
+            ul {
+                flex-direction: column; /* Stack the menu items vertically */
+                align-items: center; /* Center the items */
+            }
+
+            ul li {
+                margin: 10px 0; /* Space between items */
+            }
+
+            ul li a {
+                font-size: 18px;
+            }
+
+            #para1,
+            #para2 {
+                font-size: 2em;
+            }
+
+            h1 {
+                font-size: 60px;
+            }
+
+            footer {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            ul li a {
+                font-size: 16px;
+            }
+
+            #para1,
+            #para2 {
+                font-size: 1.5em;
+            }
+
+            h1 {
+                font-size: 50px;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -141,16 +189,16 @@
             </ul>
         </div>
     </header>
-    
+
     <div id="content">
         <h2 id="para1"><i>Welcome to</i></h2>
         <h1><i>Kolambugan Municipality</i></h1>
-        <h2 id="para2"><i>know more about us</i></h2>
+        <h2 id="para2"><i>Know more about us</i></h2>
     </div>
 
     <footer>
         <p>© 2024 Kolambugan Municipality</p>
     </footer>
-
 </body>
+
 </html>
